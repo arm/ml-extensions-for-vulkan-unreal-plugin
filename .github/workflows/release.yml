@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: Copyright 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-License-Identifier: MIT
+
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of release'
+        required: true
+        type: string
+
+jobs:
+  release:
+    runs-on: windows-2025
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+                  
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+        with:
+          msbuild-architecture: x64
+      
+      - name: Install VC++ Toolset 14.38.17.8
+        run: choco install visualstudio2022buildtools --package-parameters "--add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools --add Microsoft.VisualStudio.Component.VC.14.38.17.8.x86.x64 --includeRecommended" -y
+      
+      - name: Setup long paths
+        run: git config --system core.longpaths true
+        
+      - name: Build third-party dependencies
+        run: ./BuildThirdParty.ps1
+        shell: pwsh
+        
+      - name: Delete files/folders we don't need in the release
+        run: |
+          rm -Recurse -Force Intermediate
+          rm -Recurse -Force .git
+          rm -Recurse -Force .github
+        shell: pwsh
+
+      - name: Create release zip
+        run: Compress-Archive -Path * -DestinationPath "NNERuntimeRDGMLExtensionsForVulkan.zip" -CompressionLevel Optimal
+        shell: pwsh
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ inputs.name }}
+          tag_name: ${{ github.ref_name }}
+          draft: true
+          files: NNERuntimeRDGMLExtensionsForVulkan.zip
+        env:
+
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

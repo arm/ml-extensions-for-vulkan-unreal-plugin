@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: Copyright 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-License-Identifier: MIT
+
+Binaries/Win64/
+Intermediate/
+*.vs
+
+# These files belong to separate repos and are copied/built here as part of the release process.
+Source/ThirdParty/AIMLSDKVGFLibrary/Include/
+Source/ThirdParty/AIMLSDKVGFLibrary/Lib/
+Source/ThirdParty/SPIRVTools/Include/
+Source/ThirdParty/SPIRVTools/Lib/
+Source/ThirdParty/Vulkan/Include/
+MLEmulationLayerForVulkan/

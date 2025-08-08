@@ -1,0 +1,33 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "NNERuntimeRDGMLExtensionsForVulkan",
+	"Description": "ML Extensions for Vulkan® runtime for the NNE framework.",
+	"Category": "AI",
+	"CreatedBy": "Arm Limited",
+	"CreatedByURL": "www.arm.com",
+	"MarketplaceURL": "",
+	"CanContainContent": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "NNERuntimeRDGMLExtensionsForVulkanEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64", "Linux" ]
+		},
+		{
+			"Name": "NNERuntimeRDGMLExtensionsForVulkan",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64", "Linux" ]
+		},
+		{
+			"Name": "NNERuntimeRDGMLExtensionsForVulkanPreInit",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"PlatformAllowList": [ "Win64", "Linux" ]
+		},
+	]
+}
