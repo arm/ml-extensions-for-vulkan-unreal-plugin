@@ -81,28 +81,28 @@ Push-Location "$WorkingDir"
 
 # --- Clone repositories ---
 Write-Host "Cloning ai-ml-sdk-vgf-library..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-sdk-vgf-library.git" -Commit "bf2de11731b7e60a8f1fe04da47a56fa003a80ed" -TargetDirName "ai-ml-sdk-vgf-library"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-sdk-vgf-library.git" -Commit "v0.7.0" -TargetDirName "ai-ml-sdk-vgf-library"
 
 Write-Host "Cloning flatbuffers..."
 CloneRepoFromCommit -RepoUrl "https://github.com/google/flatbuffers.git" -Commit "v23.5.26" -TargetDirName "flatbuffers"
 
 Write-Host "Cloning SPIRV-Tools..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Tools.git" -Commit "4ed8384fb5c356f2241a43b31f2d34fb82c1883d" -TargetDirName "SPIRV-Tools"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Tools.git" -Commit "staging-2025-09-09" -TargetDirName "SPIRV-Tools"
 
 Write-Host "Cloning SPIRV-Headers..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Headers.git" -Commit "de1807b7cfa8e722979d5ab7b7445b258dbc1836" -TargetDirName "SPIRV-Headers"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Headers.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "SPIRV-Headers"
 
 Write-Host "Cloning Vulkan-Headers..."
 CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/Vulkan-Headers.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "Vulkan-Headers"
 
 Write-Host "Cloning ai-ml-emulation-layer-for-vulkan..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-emulation-layer-for-vulkan.git" -Commit "788ac998abdf33df6efe71c5b0df365d2e721c3c" -TargetDirName "ai-ml-emulation-layer-for-vulkan"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-emulation-layer-for-vulkan.git" -Commit "v0.7.0" -TargetDirName "ai-ml-emulation-layer-for-vulkan"
 
 Write-Host "Cloning glslang..."
 CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/glslang.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "glslang"
 
 Write-Host "Cloning SPIRV-Cross..."
-CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/SPIRV-Cross.git" -Commit "256192e6248c8f6234323c998993126e841e1830" -TargetDirName "SPIRV-Cross"
+CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/SPIRV-Cross.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "SPIRV-Cross"
 
 
 
