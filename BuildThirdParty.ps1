@@ -90,19 +90,19 @@ Write-Host "Cloning SPIRV-Tools..."
 CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Tools.git" -Commit "staging-2025-09-09" -TargetDirName "SPIRV-Tools"
 
 Write-Host "Cloning SPIRV-Headers..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Headers.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "SPIRV-Headers"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/SPIRV-Headers.git" -Commit "9268f3057354a2cb65991ba5f38b16d81e803692" -TargetDirName "SPIRV-Headers"
 
 Write-Host "Cloning Vulkan-Headers..."
 CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/Vulkan-Headers.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "Vulkan-Headers"
 
 Write-Host "Cloning ai-ml-emulation-layer-for-vulkan..."
-CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-emulation-layer-for-vulkan.git" -Commit "v0.7.0" -TargetDirName "ai-ml-emulation-layer-for-vulkan"
+CloneRepoFromCommit -RepoUrl "https://github.com/arm/ai-ml-emulation-layer-for-vulkan.git" -Commit "db56249d4b8aaf40f8fb0f2ec499e7f555478cc1" -TargetDirName "ai-ml-emulation-layer-for-vulkan"
 
 Write-Host "Cloning glslang..."
 CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/glslang.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "glslang"
 
 Write-Host "Cloning SPIRV-Cross..."
-CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/SPIRV-Cross.git" -Commit "vulkan-sdk-1.4.321.0" -TargetDirName "SPIRV-Cross"
+CloneRepoFromCommit -RepoUrl "https://github.com/KhronosGroup/SPIRV-Cross.git" -Commit "97709575e2332548603d308890423126100608ae" -TargetDirName "SPIRV-Cross"
 
 
 
